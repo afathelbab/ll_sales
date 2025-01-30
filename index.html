@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sales Team Tool</h1>
+    <table id="hardwareTable">
+      <thead>
+        <tr>
+          <th>Device</th>
+          <th>Cost Price</th>
+          <th>Purchasing Price</th>
+          <th>Financing Price</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody id="hardwareBody"></tbody>
+    </table>
+    <p id="discountContainer">
+        Final Discount (%): 
+        <input type="number" id="finalDiscount" value="20" min="0" max="50" onchange="enforceDiscountLimit(this); updateQuote()">
+      </p>
+         
+      
+
+    <div id="resultSection">
+      <h2>Results</h2>
+      <label>
+        <input type="radio" name="pricingModel" value="purchasing" checked onchange="updateQuote()"> Purchasing
+      </label>
+      <label>
+        <input type="radio" name="pricingModel" value="financing" onchange="updateQuote()"> Financing
+      </label>
+      <ul id="selectedDevicesList"></ul>
+      <p id="totalCost"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
