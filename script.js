@@ -57,10 +57,10 @@ const hardware = [
 
   const enforceDiscountLimit = (input) => {
     if (parseFloat(input.value) > 50) {
-      input.value = 50; // Reset to maximum allowed value
+      input.value = 50; // Maximum allowed discount
     }
     if (parseFloat(input.value) < 0) {
-      input.value = 0; // Reset to minimum allowed value
+      input.value = 0; // Minimum allowed discount
     }
   };
   
